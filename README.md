@@ -2,7 +2,7 @@
 # Language: CUDA
 # Input: CSV (abundances)
 # Output: CSV (correlations)
-# Tested with: PluMA 1.0, CUDA 8.0
+# Tested with: PluMA 1.1, CUDA 10
 
 SparCC on the GPU (Alonso, Escobar, Panoff and Suarez, 2017).  Runs the SparCC algorithm
 (Friedman and Alm, 2012) taking advantage of GPU parallelism.
