@@ -1,14 +1,14 @@
-#ifndef SPARCCGPUPLUGIN_H
-#define SPARCCGPUPLUGIN_H
+#ifndef GPUSPARCCPLUGIN_H
+#define GPUSPARCCPLUGIN_H
 
 #include "Plugin.h"
 #include "PluginProxy.h"
 #include <string>
 
-class SparCCGPUPlugin : public Plugin
+class GPUSparCCPlugin : public Plugin
 {
 public: 
- std::string toString() {return "SparCCGPU";}
+ std::string toString() {return "GPUSparCC";}
  void input(std::string file);
  void run();
  void output(std::string file);

@@ -1,2 +1,2 @@
-Prefix plugins/SparCCGPU/example
-Plugin SparCCGPU inputfile normFileNever.csv outputfile never.sparcc.csv
+Prefix plugins/GPUSparCC/example
+Plugin GPUSparCC inputfile normFileNever.csv outputfile never.sparcc.csv

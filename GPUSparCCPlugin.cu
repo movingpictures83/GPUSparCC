@@ -30,7 +30,7 @@ Returns an array of size cols*cols, filled with the matrix of correlations
 #include <unistd.h>
 #include "csv.h"
 #include "libcsv.c"
-#include "SparCCGPUPlugin.h"
+#include "GPUSparCCPlugin.h"
 
 #include <fcntl.h>
 #include <iostream>
@@ -399,7 +399,7 @@ void cb2 (int c, void *p) {
 
 //int main(int argc, char **argv){
 
-void SparCCGPUPlugin::input(std::string file) {
+void GPUSparCCPlugin::input(std::string file) {
     inputfile = file;
     extern char *optarg;
     extern int optind;
@@ -483,7 +483,7 @@ void SparCCGPUPlugin::input(std::string file) {
     }     
     }   
         
-void SparCCGPUPlugin::run() {    
+void GPUSparCCPlugin::run() {    
         
     r = rows;   //set for printing
     columns = cols;   //set for printing
@@ -579,7 +579,7 @@ void SparCCGPUPlugin::run() {
     cudaFree(&pValueMatrix); 
 }
 
-void SparCCGPUPlugin::output(std::string file) {
+void GPUSparCCPlugin::output(std::string file) {
     outputfile = file;
     finish(outputfile, taxa, b, cols*cols, "GPU");
     
@@ -589,4 +589,4 @@ void SparCCGPUPlugin::output(std::string file) {
     
 }
 
-PluginProxy<SparCCGPUPlugin> SparCCGPUPluginProxy = PluginProxy<SparCCGPUPlugin>("SparCCGPU", PluginManager::getInstance());
+PluginProxy<GPUSparCCPlugin> GPUSparCCPluginProxy = PluginProxy<GPUSparCCPlugin>("GPUSparCC", PluginManager::getInstance());
